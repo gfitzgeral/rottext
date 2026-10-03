@@ -15,5 +15,9 @@ def rot(text: str, steps: int = 13) -> str:
     return "".join(out)
 
 
+def unrot(text: str, steps: int = 13) -> str:
+    return rot(text, -steps)
+
+
 def rot13(text: str) -> str:
     return rot(text, 13)
