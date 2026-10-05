@@ -21,3 +21,7 @@ def unrot(text: str, steps: int = 13) -> str:
 
 def rot13(text: str) -> str:
     return rot(text, 13)
+
+
+def matches_rot(text: str, other: str, steps: int = 13) -> bool:
+    return rot(text, steps) == other
