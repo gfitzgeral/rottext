@@ -25,3 +25,7 @@ def rot13(text: str) -> str:
 
 def matches_rot(text: str, other: str, steps: int = 13) -> bool:
     return rot(text, steps) == other
+
+
+def letter_count(text: str) -> int:
+    return sum(1 for char in text if ("a" <= char <= "z") or ("A" <= char <= "Z"))
