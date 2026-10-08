@@ -1,6 +1,6 @@
 import unittest
 
-from rottext import matches_rot, rot, rot13, unrot
+from rottext import letter_count, matches_rot, rot, rot13, unrot
 
 
 class RottextTest(unittest.TestCase):
@@ -11,6 +11,8 @@ class RottextTest(unittest.TestCase):
         self.assertEqual(unrot(rot("Hello", 5), 5), "Hello")
         self.assertTrue(matches_rot("ab", "bc", 1))
         self.assertFalse(matches_rot("ab", "ab", 1))
+        self.assertEqual(letter_count("Hello, 1"), 5)
+        self.assertEqual(letter_count("123"), 0)
 
 
 if __name__ == "__main__":
