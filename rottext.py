@@ -35,3 +35,8 @@ def keeps(text: str) -> str:
     return "".join(
         char for char in text if not (("a" <= char <= "z") or ("A" <= char <= "Z"))
     )
+
+
+def moved(text: str, steps: int = 13) -> int:
+    shifted = rot(text, steps)
+    return sum(1 for left, right in zip(text, shifted) if left != right)
