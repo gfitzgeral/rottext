@@ -40,3 +40,7 @@ def keeps(text: str) -> str:
 def moved(text: str, steps: int = 13) -> int:
     shifted = rot(text, steps)
     return sum(1 for left, right in zip(text, shifted) if left != right)
+
+
+def unchanged(text: str, steps: int = 13) -> bool:
+    return rot(text, steps) == text
