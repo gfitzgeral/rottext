@@ -49,3 +49,7 @@ def unchanged(text: str, steps: int = 13) -> bool:
 def shifted(text: str, steps: int = 13) -> str:
     moved_text = rot(text, steps)
     return "".join(right for left, right in zip(text, moved_text) if left != right)
+
+
+def kept_count(text: str) -> int:
+    return len(keeps(text))
