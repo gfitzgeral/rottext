@@ -1,6 +1,6 @@
 import unittest
 
-from rottext import keeps, letter_count, matches_rot, moved, rot, rot13, shifted, unchanged, unrot
+from rottext import keeps, kept_count, letter_count, matches_rot, moved, rot, rot13, shifted, unchanged, unrot
 
 
 class RottextTest(unittest.TestCase):
@@ -19,6 +19,7 @@ class RottextTest(unittest.TestCase):
         self.assertFalse(unchanged("Hello", 13))
         self.assertEqual(shifted("ab", 1), "bc")
         self.assertEqual(shifted("1", 1), "")
+        self.assertEqual(kept_count("Hello, 1"), 3)
 
 
 if __name__ == "__main__":
