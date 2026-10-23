@@ -53,3 +53,7 @@ def shifted(text: str, steps: int = 13) -> str:
 
 def kept_count(text: str) -> int:
     return len(keeps(text))
+
+
+def all_kept(text: str) -> bool:
+    return kept_count(text) == len(text)
