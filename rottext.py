@@ -61,3 +61,6 @@ def all_kept(text: str) -> bool:
 
 def none_kept(text: str) -> bool:
     return text != "" and kept_count(text) == 0
+
+def some_kept(text: str) -> bool:
+    return kept_count(text) > 0
