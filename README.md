@@ -3,7 +3,7 @@
 ROT13. Letters rotate by 13. Digits, spaces, and punctuation are unchanged. Applying it twice returns the original text.
 
 ```python
-from rottext import rot13, rot, unrot, matches_rot, letter_count, keeps, moved, unchanged, shifted, kept_count, all_kept, none_kept, some_kept
+from rottext import rot13, rot, unrot, matches_rot, letter_count, keeps, moved, unchanged, shifted, kept_count, all_kept, none_kept, some_kept, partial_kept
 
 rot13("Hello")
 rot("ab", 1)  # "bc"
