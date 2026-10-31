@@ -64,3 +64,6 @@ def none_kept(text: str) -> bool:
 
 def some_kept(text: str) -> bool:
     return kept_count(text) > 0
+
+def partial_kept(text: str) -> bool:
+    return 0 < kept_count(text) < len(text)
