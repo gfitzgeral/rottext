@@ -1,6 +1,6 @@
 import unittest
 
-from rottext import all_kept, keeps, kept_count, letter_count, matches_rot, moved, none_kept, rot, rot13, shifted, unchanged, unrot, some_kept
+from rottext import all_kept, keeps, kept_count, letter_count, matches_rot, moved, none_kept, rot, rot13, shifted, unchanged, unrot, some_kept, partial_kept
 
 
 class RottextTest(unittest.TestCase):
@@ -28,6 +28,9 @@ class RottextTest(unittest.TestCase):
 
         self.assertTrue(some_kept("Hello, 1"))
         self.assertFalse(some_kept("Hello"))
+
+        self.assertTrue(partial_kept("Hello, 1"))
+        self.assertFalse(partial_kept("123"))
 
 if __name__ == "__main__":
     unittest.main()
